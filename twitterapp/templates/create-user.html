@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>Create user Here...</h1>
+
+<h3>{{ name }}</h3>
+
+<h2>{{ list_of_names.secondguy }}</list_of_names></h2>
+
+{% for name in list_of_names.values() %}
+    <P>{{ name }}</P>
+    <P>{{ name }}</P>
+{% endfor %}
+
+{% endblock content %}
