@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+<h1>Create a new Post:</h1>
+
+<form action=""method = "POST">
+<fieldset>
+    {{ form.title.label}}
+    {{form.title(class="form-control")}}
+
+</fieldset>
+<fieldset>
+    {{form.content.label}}
+    {{form.content(class="form-control")}}
+</fieldset>
+<fieldset>
+    {{form.submit(class="btn btn-success")}}
+
+</fieldset>
+</form>
+
+
+{% endblock content%}

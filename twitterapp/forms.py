@@ -16,3 +16,8 @@ class LoginForm(FlaskForm):
     email = StringField("Email", validators = [input_required(), Email()])
     password = PasswordField("password", validators = [input_required()])
     submit = SubmitField()
+
+class PostForm(FlaskForm):
+    title = StringField("Title", validators = [input_required()])
+    content = StringField("Content", validators = [input_required()])
+    submit = SubmitField()

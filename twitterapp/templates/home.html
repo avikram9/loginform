@@ -13,15 +13,16 @@
         <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
         <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
       </div>
-      <div class="row">
-            <!--First card-->
+{% if current_user.is_authenticated %}
+<div class="row">
+      <!--First card-->
             <div class="col-md-4">
                     <div class="card" style="width: 18rem;">
                             <img src="..." class="card-img-top" alt="...">
                             <div class="card-body">
                               <h5 class="card-title">Card title</h5>
                               <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                              <a href="#" class="btn btn-primary">Go somewhere</a>
+                              <a href="{{ url_for('post_detail', id=1)}}" class="btn btn-primary">Go somewhere</a>
                             </div>
                           </div>
             </div>
@@ -33,7 +34,7 @@
                             <div class="card-body">
                               <h5 class="card-title">Card title</h5>
                               <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                              <a href="#" class="btn btn-primary">Go somewhere</a>
+                              <a href="{{ url_for('post_detail', id=2)}}" class="btn btn-success">Go somewhere</a>
                             </div>
                           </div>
             </div>
@@ -45,11 +46,17 @@
                             <div class="card-body">
                               <h5 class="card-title">Card title</h5>
                               <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                              <a href="#" class="btn btn-primary">Go somewhere</a>
+                              <a href="{{ url_for('post_detail', id=3)}}" class="btn btn-danger">Go somewhere</a>
                             </div>
                           </div>
             </div>
             <!--end Third card-->
            
 
+
+{% else %}
+<h1> Nothing to show here </h1>
+
+
+{% endif %}
 {% endblock content %}
